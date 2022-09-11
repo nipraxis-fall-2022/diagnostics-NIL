@@ -12,7 +12,7 @@ requirements are met and raise an error otherwise.
 
 # Any imports you need
 # +++your code here+++
-
+import numpy as np
 
 def iqr_detector(measures, iqr_proportion=1.5):
     """ Detect outliers in `measures` using interquartile range.
@@ -51,3 +51,13 @@ def iqr_detector(measures, iqr_proportion=1.5):
     # * You'll likely need np.logical_or
     # https://textbook.nipraxis.org/numpy_logical.html
     # +++your code here+++
+
+    Q1 = np.quantile(measures,0.25)
+    Q2 = np.quantile(measures,0.5)
+    Q3 = np.quantile(measures,0.75)
+
+    IQR = Q3-Q1
+
+    outlier_tf = np.logical_or(measures > Q3 + IQR * iqr_proportion,measures < Q1 - IQR * iqr_proportion)
+
+    return outlier_tf
