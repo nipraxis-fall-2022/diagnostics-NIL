@@ -11,8 +11,10 @@ import nibabel as nib
 
 import nipraxis as npx
 
-from findoutlie.metrics import dvars
+import sys
+sys.path.append('/Users/jiaxintu/Documents/Python/nipraxis-work/diagnostics-NIL/')
 
+from findoutlie.metrics import dvars
 
 TEST_FNAME = npx.fetch_file('ds114_sub009_t2r1.nii')
 
