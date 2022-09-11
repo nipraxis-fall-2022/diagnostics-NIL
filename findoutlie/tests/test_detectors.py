@@ -19,6 +19,7 @@ MY_DIR = Path(__file__).parent
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
 # +++your code here+++
+sys.path.append('/Users/jiaxintu/Documents/Python/nipraxis-work/diagnostics-NIL/findoutlie')
 
 import numpy as np
 
@@ -33,6 +34,7 @@ def test_iqr_detector():
         [10.2, 14.1, 14.4, 14.4, 14.4, 14.5, 14.5, 14.6, 14.7, 14.7, 14.7,
          14.9, 15.1, 15.9, 16.4])
     is_outlier = iqr_detector(example_values, 1.5)
+    print(example_values[is_outlier])
     assert np.all(example_values[is_outlier] == [10.2, 15.9, 16.4])
     # Test not-default value for outlier proportion
     is_outlier = iqr_detector(example_values, 0.5)
