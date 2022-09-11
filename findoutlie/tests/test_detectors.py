@@ -19,7 +19,8 @@ MY_DIR = Path(__file__).parent
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
 # +++your code here+++
-sys.path.append('/Users/jiaxintu/Documents/Python/nipraxis-work/diagnostics-NIL/findoutlie')
+code_dir = (MY_DIR / '..').absolute()
+sys.path.append(str(code_dir))
 
 import numpy as np
 

@@ -11,8 +11,11 @@ import nibabel as nib
 
 import nipraxis as npx
 
+from pathlib import Path
 import sys
-sys.path.append('/Users/jiaxintu/Documents/Python/nipraxis-work/diagnostics-NIL/')
+
+MY_DIR = Path(__file__).parent
+sys.path.append(str((MY_DIR / '..'/ '..').absolute()))
 
 from findoutlie.metrics import dvars
 
