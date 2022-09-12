@@ -15,11 +15,11 @@ from pathlib import Path
 import sys
 
 MY_DIR = Path(__file__).parent
-sys.path.append(str((MY_DIR / '..'/ '..').absolute()))
+sys.path.append(str((MY_DIR / ".." / "..").absolute()))
 
 from findoutlie.metrics import dvars
 
-TEST_FNAME = npx.fetch_file('ds114_sub009_t2r1.nii')
+TEST_FNAME = npx.fetch_file("ds114_sub009_t2r1.nii")
 
 
 def test_dvars():
@@ -35,6 +35,6 @@ def test_dvars():
     for i in range(1, n_trs):
         this_vol = data[..., i]
         d = this_vol - prev_vol
-        long_dvals.append(np.sqrt(np.sum(d ** 2) / n_voxels))
+        long_dvals.append(np.sqrt(np.sum(d**2) / n_voxels))
         prev_vol = this_vol
     assert np.allclose(dvals, long_dvals)

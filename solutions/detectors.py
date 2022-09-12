@@ -13,13 +13,14 @@ requirements are met and raise an error otherwise.
 # Any imports you need
 # LAB(begin solution)
 import numpy as np
+
 # LAB(replace solution)
 # +++your code here+++
 # LAB(end solution)
 
 
 def iqr_detector(measures, iqr_proportion=1.5):
-    """ Detect outliers in `measures` using interquartile range.
+    """Detect outliers in `measures` using interquartile range.
 
     Returns a boolean vector of same length as `measures`, where True means the
     corresponding value in `measures` is an outlier.
