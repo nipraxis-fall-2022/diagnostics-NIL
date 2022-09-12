@@ -11,7 +11,7 @@ import sys
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
 # Put the findoutlie directory on the Python path.
-PACKAGE_DIR = Path(__file__).parent / '..'
+PACKAGE_DIR = Path(__file__).parent / ".."
 sys.path.append(str(PACKAGE_DIR))
 
 from findoutlie import outfind
@@ -25,14 +25,15 @@ def print_outliers(data_directory):
         outlier_strs = []
         for out_ind in outliers:
             outlier_strs.append(str(out_ind))
-        print(', '.join([str(fname)] + outlier_strs))
+        print(", ".join([str(fname)] + outlier_strs))
 
 
 def get_parser():
-    parser = ArgumentParser(description=__doc__,  # Usage from docstring
-                            formatter_class=RawDescriptionHelpFormatter)
-    parser.add_argument('data_directory',
-                        help='Directory containing data')
+    parser = ArgumentParser(
+        description=__doc__,  # Usage from docstring
+        formatter_class=RawDescriptionHelpFormatter,
+    )
+    parser.add_argument("data_directory", help="Directory containing data")
     return parser
 
 
@@ -46,6 +47,6 @@ def main():
     print_outliers(args.data_directory)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Python is running this file as a script, not importing it.
     main()

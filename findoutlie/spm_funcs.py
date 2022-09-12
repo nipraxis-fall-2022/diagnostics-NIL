@@ -18,7 +18,7 @@ import nibabel as nib
 
 
 def spm_global(vol):
-    """ Calculate SPM global metric for array `vol`
+    """Calculate SPM global metric for array `vol`
 
     Parameters
     ----------
@@ -35,7 +35,7 @@ def spm_global(vol):
 
 
 def get_spm_globals(fname):
-    """ Calculate SPM global metrics for volumes in image filename `fname`
+    """Calculate SPM global metrics for volumes in image filename `fname`
 
     Parameters
     ----------

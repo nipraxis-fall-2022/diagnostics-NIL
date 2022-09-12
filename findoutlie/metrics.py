@@ -7,7 +7,7 @@ import numpy as np
 
 
 def dvars(img):
-    """ Calculate dvars metric on Nibabel image `img`
+    """Calculate dvars metric on Nibabel image `img`
 
     The dvars calculation between two volumes is defined as the square root of
     (the mean of the (voxel differences squared)).

@@ -12,7 +12,7 @@ from .detectors import iqr_detector
 
 
 def detect_outliers(fname):
-    """ Detect outliers given image file path `filename`
+    """Detect outliers given image file path `filename`
 
     Parameters
     ----------
@@ -33,7 +33,7 @@ def detect_outliers(fname):
 
 
 def find_outliers(data_directory):
-    """ Return filenames and outlier indices for images in `data_directory`.
+    """Return filenames and outlier indices for images in `data_directory`.
 
     Parameters
     ----------
@@ -46,7 +46,7 @@ def find_outliers(data_directory):
         Dictionary with keys being filenames and values being lists of outliers
         for filename.
     """
-    image_fnames = Path(data_directory).glob('**/sub-*.nii.gz')
+    image_fnames = Path(data_directory).glob("**/sub-*.nii.gz")
     outlier_dict = {}
     for fname in image_fnames:
         outliers = detect_outliers(fname)
