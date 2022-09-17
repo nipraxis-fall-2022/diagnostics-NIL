@@ -17,7 +17,7 @@ import sys
 MY_DIR = Path(__file__).parent
 sys.path.append(str((MY_DIR / ".." / "..").absolute()))
 
-from findoutlie.metrics import dvars
+from findoutlie.metrics import dvars  # noqa: E402
 
 TEST_FNAME = npx.fetch_file("ds114_sub009_t2r1.nii")
 

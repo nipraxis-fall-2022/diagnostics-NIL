@@ -18,15 +18,14 @@ MY_DIR = Path(__file__).parent
 # directory to the Python path.
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
-# +++your code here+++
 code_dir = (MY_DIR / "..").absolute()
 sys.path.append(str(code_dir))
 
-import numpy as np
+import numpy as np  # noqa: E402
 
 # This import needs the directory containing the findoutlie directory
 # on the Python path.
-from detectors import iqr_detector
+from detectors import iqr_detector  # noqa: E402
 
 
 def test_iqr_detector():

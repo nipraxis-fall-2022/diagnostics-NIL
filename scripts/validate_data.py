@@ -73,10 +73,7 @@ def main():
     group_directory = Path(__file__).parent.parent / "data"
     groups = list(group_directory.glob("group-??"))
     if len(groups) == 0:
-        raise RuntimeError(
-            "No group directory in data directory: "
-            "have you downloaded and unpacked the data?"
-        )
+        raise RuntimeError("No group directory in data directory: " "have you downloaded and unpacked the data?")
 
     if len(groups) > 1:
         raise RuntimeError("Too many group directories in data directory")

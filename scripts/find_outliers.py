@@ -14,7 +14,7 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 PACKAGE_DIR = Path(__file__).parent / ".."
 sys.path.append(str(PACKAGE_DIR))
 
-from findoutlie import outfind
+from findoutlie import outfind  # noqa: E402
 
 
 def print_outliers(data_directory):
