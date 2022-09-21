@@ -7,7 +7,7 @@ import numpy as np
 
 import nibabel as nib
 
-from .metrics import dvars
+from .metrics import dvars, framewise_displacement
 from .detectors import iqr_detector
 
 
@@ -24,10 +24,15 @@ def detect_outliers(fname):
     outliers : array
         Indices of outlier volumes.
     """
-    # This is a very simple function, using dvars and iqroutliers
+    # using dvars and iqroutliers
     img = nib.load(fname)
     dvs = dvars(img)
     is_outlier = iqr_detector(dvs, iqr_proportion=2)
+
+    # use 0.2 threshold of framewise displacement
+    fds = framewise_displacement(img)
+    is_outlier = np.logical_or(is_outlier, fds > 0.2)
+
     # Return indices of True values from Boolean array.
     return np.nonzero(is_outlier)
 

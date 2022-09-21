@@ -19,17 +19,16 @@ EXAMPLE_FILENAME = "ds107_sub012_t1r2_small.nii"
 # directory to the Python path.
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
-# +++your code here+++
 code_dir = (MY_DIR / "..").absolute()
 sys.path.append(str(code_dir))
 
-import numpy as np
+import numpy as np  # noqa: E402
 
-import nibabel as nib
+import nibabel as nib  # noqa: E402
 
 # This import needs the directory containing the findoutlie directory
 # on the Python path.
-from spm_funcs import get_spm_globals, spm_global
+from spm_funcs import get_spm_globals, spm_global  # noqa: E402
 
 
 def test_spm_globals():

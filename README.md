@@ -16,19 +16,6 @@ curl -L https://figshare.com/ndownloader/files/34951650 -o group_data.tar
 tar xvf group_data.tar
 ```
 
-Add the hash_list file to Git:
-
-```
-git add data/group-*/hash_list.txt
-git commit -m "Add hash list file"
-```
-
-Change directory back to root of repository
-
-```
-cd ..
-```
-
 ## Check the data
 
 ```
